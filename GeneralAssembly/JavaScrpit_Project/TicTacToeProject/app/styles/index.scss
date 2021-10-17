@@ -1,0 +1,35 @@
+// set the primary anc secondary before we import bootstrap
+// can be added to varibale folder as long as variable folder is before the 
+// bootstrap import
+$primary: #ee6c4d;
+$secondary: #98c1d9;
+
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import 'variables';
+
+
+body {
+  background-color: $secondary;
+}
+
+.box {
+  align-items: center;
+  background-color: lightgrey;
+  border: 1px solid white;
+  color: white;
+  display: flex;
+  font-family: $accent-font-family;
+  justify-content: center;
+}
+
+h1, h2 {
+  font-family: $accent-font-family;
+}
+
+.alt-color {
+  background-color: $secondary;
+}
+.searchBar{
+  align-content: flex-end;
+}
