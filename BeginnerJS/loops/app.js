@@ -13,6 +13,22 @@ const symbols ={
   fb: "Facebook",
   hr: "Hisham Raihan"
 }
-for(const n in symbols){
-  console.log(`Keys is: ${n} and value is: ${symbols}`);
+for(const key in symbols){
+  console.log('Key is: ' + key + ' Value is: ' + symbols[key]);
 }
+
+const array1 = [1,2,3,4,5,]
+
+let result = 0;
+array1.forEach(num=> result+=num)
+
+console.log(result);
+
+function sumArray(...a){
+  let result2 = 0;
+  for(const num of a){
+    result2 += num
+  }
+  return result2
+}
+console.log(sumArray(1,2,3,4,5));
