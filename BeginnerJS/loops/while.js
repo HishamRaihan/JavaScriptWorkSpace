@@ -10,3 +10,15 @@ while (!finished){
     console.log(randomNumber);
   }
 }
+let counter = 0;
+while (counter < 5) {
+	const a = 1;
+	counter++;
+  console.log(a);
+}
+
+// let number = 0;
+// for (let i = 1; i < 2; i++) {
+// 	number += 1;
+// }
+// console.log(i);

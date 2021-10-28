@@ -47,3 +47,29 @@ console.log('******For Each******');
 animals.forEach((pet) => {
 	console.log(pet);
 });
+
+let sum = 0;
+for (let i = 0; i < 5; i++) {
+	for (let j = 0; j < 2; j++) {
+		sum = sum + i + j;
+		console.log('outer', i);
+		console.log('inner', j);
+		continue;
+	}
+}
+console.log(sum);
+
+{
+	let sum = 0;
+	for (let i = 0; i < 5; i++) {
+		for (let j = 0; j < 2; j++) {
+			if (i >= 2) {
+				continue;
+			}
+			sum = sum + i + j;
+			console.log('outer', i);
+			console.log('inner', j);
+		}
+	}
+	console.log(sum);
+}
