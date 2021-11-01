@@ -18,3 +18,11 @@
 
 // only use if its a one time function passing a function to a function
 // better to give annymous functions names so its easier to debug
+const sumUp = (...numbers) =>{
+  let sum = 0;
+  for (const num of numbers) {
+    sum += num;
+  }
+  return sum;
+}
+console.log(sumUp(1,2,3,4,5,6,7,8,9,10));
