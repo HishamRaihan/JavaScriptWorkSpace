@@ -1,7 +1,7 @@
 // error handling conditional
 // async aspect
 
-const isError = false;
+const isError = true;
 // new keyword because its a constuctor!
 // inline function defined in the promise
 new Promise((resolve, reject) => {
