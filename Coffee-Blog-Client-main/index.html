@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Example</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Do not add `link` tags-->
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+		<!-- Do not add `script` tags-->
+		<script
+			src="public/vendor.js"
+			type="text/javascript"
+			charset="utf-8"
+			defer
+		></script>
+		<script
+			src="public/application.js"
+			type="text/javascript"
+			charset="utf-8"
+			defer
+		></script>
+	</head>
+	<body>
+		<h1>Coffee-Blog Template</h1>
+		<section id="before-sign-in">
+			<!-- Sign up form goes here! -->
+			<form id="sign-up" class="border">
+				<!-- to group multiple inputs together in our form -->
+				<fieldset>
+					<legend>Sign Up</legend>
+					<label for="em">Email:</label>
+					<input
+						type="email"
+						name="credentials[email]"
+						id="em"
+						placeholder="Enter Email"
+						required
+					/>
+					<label for="ps">Password:</label>
+					<input
+						type="password"
+						name="credentials[password]"
+						id="ps"
+						placeholder="Enter Password"
+						required
+					/>
+					<label for="psc">Password Confirmation:</label>
+					<input
+						type="password"
+						name="credentials[password_confirmation]"
+						id="psc"
+						placeholder="Enter Password Confirmation"
+						required
+					/>
+					<button class="btn btn-success">Sign-Up</button>
+				</fieldset>
+			</form>
+
+			<!-- Sign In -->
+
+			<form id="sign-in" class="border">
+				<fieldset>
+					<legend>Sign In</legend>
+					<label for="email">Email:</label>
+					<input
+						type="email"
+						name="credentials[email]"
+						id="email"
+						placeholder="Enter Email"
+						required
+					/>
+					<label for="password">Password:</label>
+					<input
+						type="password"
+						name="credentials[password]"
+						id="password"
+						placeholder="Enter Password"
+						required
+					/>
+					<button class="btn btn-primary">Sign-In</button>
+				</fieldset>
+			</form>
+		</section>
+
+		<!-- we only want this to be visible after you sign in -->
+		<!-- by default it should not be displayed -->
+		<section id="after-sign-in">
+			<!-- change password and sign out forms  -->
+			<form id="change-password" class="border">
+				<fieldset>
+					<legend>Change Password</legend>
+					<label for="old">Old Password:</label>
+					<input
+						type="password"
+						name="passwords[old]"
+						id="old"
+						placeholder="Enter Old Password"
+						required
+					/>
+					<label for="new">New Password:</label>
+					<input
+						type="password"
+						name="passwords[new]"
+						id="new"
+						placeholder="Enter New Password"
+						required
+					/>
+					<button class="btn btn-primary">Change Password</button>
+				</fieldset>
+			</form>
+
+			<form id="sign-out" class="border">
+				<fieldset>
+					<legend>Sign Out</legend>
+					<button class="btn btn-primary">Sign Out</button>
+				</fieldset>
+			</form>
+		</section>
+
+		<!-- create a section for your user feedback -->
+		<!-- cafes section -->
+		<section>
+			<h2>Create One Cafe</h2>
+			<form id="cafes-create" action="">
+				<input type="text" name="cafe[name]" placeholder="Enter Cafe Name" />
+				<input type="text" name="cafe[address]" placeholder="Enter Address" />
+				<input type="text" name="cafe[hours]" placeholder="Enter hours" />
+				<button>Create Cafe</button>
+			</form>
+			<hr />
+
+			<h2>Delete Book</h2>
+			<form id="delete-cafe" action="">
+				<input type="text" name="cafe[id]" placeholder="Enter Cafe Id" />
+				<!-- this button will submit the form, since it is inside a form it has teh submit by default, which mean s if the button is clicked the form is submitted -->
+				<button>Delete Book</button>
+			</form>
+			<hr />
+
+			<h2>Get All Cafes!</h2>
+			<button id="cafes-index">Get All Cafes</button>
+			<hr />
+
+			<h2>Get One Cafe by Id</h2>
+			<form id="cafes-show" action="">
+				<input type="text" name="cafe[id]" placeholder="Enter cafe Id" />
+				<button>Get Single Cafe!</button>
+			</form>
+			<hr />
+		</section>
+
+		<section>
+			<div id="error-message"></div>
+
+			<div id="cafes-display"></div>
+		</section>
+	</body>
+</html>
