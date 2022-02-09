@@ -11,6 +11,7 @@ console.log(stackArry);
 const word = "words"
 
 const reverseWord = (w) => {
+  // turns w into an array
   w = Array.from(w)
   let rWord = ''
   for (let i = 0; 0 < w.length; i++) {

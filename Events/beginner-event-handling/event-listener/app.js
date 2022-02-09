@@ -5,5 +5,17 @@ const boxDiv = document.getElementById('box');
 function handleBoxClick(e) {
   console.log(e);
 	alert('Hey Page!');
+  add()
 }
 boxDiv.addEventListener('click', handleBoxClick);
+
+
+
+function add(){
+  let num1 = 1
+  let num2 = 2
+
+  const sum = num1 + num2
+
+  console.log('NUM1 + NUM2 = ' + sum);
+}
