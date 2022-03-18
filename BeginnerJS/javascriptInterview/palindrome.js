@@ -17,11 +17,11 @@ const palindrome = (str) => {
   // reverse will reverese the string 
   // join will join the array togther
   let arrayedWord = str.split('').reverse().join('')
-  if(arrayedWord === str){
+  if (arrayedWord === str) {
     console.log('this is a palindrome')
-  }else{
+  } else {
     console.log('this is not a palindrome');
   }
 }
 
-palindrome(word)
+palindrome('cat')
